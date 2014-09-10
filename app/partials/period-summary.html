@@ -1,0 +1,37 @@
+<div class="container-fluid">
+  <div class="row">
+    <!--<div class="col-md-2">-->
+      <!--Sidebar content-->
+
+      <!--Search: <input ng-model="query">
+      Sort by:
+      <select ng-model="orderProp">
+        <option value="name">Alphabetical</option>
+        <option value="age">Newest</option>
+      </select>
+
+    </div>-->
+    <div class="col-md-10">
+      <!--Body content-->
+	  
+	  <table border="1">
+		<tr ng-repeat="item in periodItems | orderBy:orderProp">
+		  <td>{{item.id}}</td>
+		  <td>{{item.projectCode}}</td>
+		  <td>{{item.taskId}}</td>
+		  <td>{{item.itemType}}</td>
+		  <td>{{item.value}}</td>
+		</tr>
+	  </table>
+
+      <!--<ul class="phones">
+        <li ng-repeat="item in periodItems | orderBy:orderProp" class="thumbnail phone-listing">
+          <a href="#/phones/{{phone.id}}" class="thumb"><img ng-src="{{item.id}}"></a>
+          <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
+          <p>{{phone.snippet}}</p>
+        </li>
+      </ul>-->
+
+    </div>
+  </div>
+</div>
