@@ -12,47 +12,52 @@
 
     </div>-->
     <div class="col-md-10">
-      <!--Body content-->
+      <!--dtx summary table-->
 	  
 	  <section id="dtx-summary-table">
-	  <table class="table-bordered table-striped table-condensed cf">
-	    <thead class="cf">
-		  <tr>
-			<th class="numeric">ID</th>
-			<th>Category Name</th>
-			<th>From</th>
-			<th>To</th>
-			<th>Project</th>
-			<th>Task</th>
-			<th class="numeric">Qty</th>
-			<th>Unit</th>
-			<th>Rating</th>
-			<th class="numeric">Amount</th>
-			<th class="numeric">VAT</th>
-			<th>Receipt</th>
-			<th>Additional Info</th>
-			<th>Business Reason</th>
-		  </tr>
-		</thead>
-		<tbody>
-		  <tr ng-repeat="item in periodItems | orderBy:orderProp">
-		    <td data-title="ID" class="numeric">{{item.id}}</td>
-			<td data-title="Category Name">{{item.categoryName}}</td>
-			<td data-title="From">&nbsp;</td>
-			<td data-title="To">&nbsp;</td>
-			<td data-title="Project">{{item.projectCode}}</td>
-			<td data-title="Task">{{item.taskId}}</td>
-			<td data-title="Qty" class="numeric">{{item.quantity}}</td>
-			<td data-title="Unit">&nbsp;</td>
-			<td data-title="Rating">&nbsp;</td>
-			<td data-title="Amount" class="numeric">&nbsp;</td>
-			<td data-title="VAT" class="numeric">&nbsp;</td>
-			<td data-title="Receipt">&nbsp;</td>
-			<td data-title="Additional Info">&nbsp;</td>
-			<td data-title="Business Reason">&nbsp;</td>
-	      </tr>
-		</tbody>
-	  </table>
+          <table class="table-bordered table-striped table-condensed cf">
+            <thead class="cf">
+              <tr>
+                <th class="numeric">ID</th>
+                <th>Category Name</th>
+                <th>From</th>
+                <th>To</th>
+                <th>Project</th>
+                <th>Task</th>
+                <th class="numeric">Qty</th>
+                <th>Unit</th>
+                <th>Rating</th>
+                <th class="numeric">Amount</th>
+                <th class="numeric">VAT</th>
+                <th>Receipt</th>
+                <th>Additional Info</th>
+                <th>Business Reason</th>
+                <th>&nbsp;</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="item in periodItems | orderBy:orderProp">
+                <td data-title="ID" class="numeric">{{item.id}}</td>
+                <td data-title="Category Name">{{item.categoryName}}</td>
+                <td data-title="From">&nbsp;</td>
+                <td data-title="To">&nbsp;</td>
+                <td data-title="Project">{{item.projectCode}}</td>
+                <td data-title="Task">{{item.taskId}}</td>
+                <td data-title="Qty" class="numeric">{{item.quantity}}</td>
+                <td data-title="Unit">&nbsp;</td>
+                <td data-title="Rating">&nbsp;</td>
+                <td data-title="Amount" class="numeric">&nbsp;</td>
+                <td data-title="VAT" class="numeric">&nbsp;</td>
+                <td data-title="Receipt">&nbsp;</td>
+                <td data-title="Additional Info">&nbsp;</td>
+                <td data-title="Business Reason">&nbsp;</td>
+                <td data-title=""><input type="button" value="Remove" class="btn btn-primary" ng-click="removeItem(item.id)"/></td>
+              </tr>
+            </tbody>
+          </table>
+       </section>
+
+       <input type="button" value="Add Item" class="btn btn-primary" ng-click="addItem()"/>
 
       <!--<ul class="phones">
         <li ng-repeat="item in periodItems | orderBy:orderProp" class="thumbnail phone-listing">
