@@ -1,16 +1,16 @@
 [
     {
         "id": 1, 
+		"categoryName": "Standard Time in UK",
         "projectCode": "ABCD123", 
         "taskId": "1", 
-        "itemType": "Standard Time in UK",
-		"value": 37.5
+		"quantity": 37.5
     }, 
     { 
         "id": 2, 
+		"categoryName": "Train Fare",
         "projectCode": "ABCD123", 
         "taskId": "1", 
-        "itemType": "Train Fare",
-		"value": 95.60
+		"quantity": 95.60
     }
 ]

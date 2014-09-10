@@ -3,24 +3,53 @@
 <head>
   <meta charset="utf-8">
   <title>DTX</title>
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="css/app.css">
-  <link rel="stylesheet" href="css/animations.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+	<style>
+      body { padding-top: 60px; }
+	  table { width: 100%; }
+	  td, th {text-align: left; white-space: nowrap;}
+	  td.numeric, th.numeric { text-align: right; }
+	  h2, h3 {margin-top: 1em;}
+	  section {padding-top: 40px;}
+    </style>
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link href="css/unseen.css" rel="stylesheet">
+	<link href="css/flip-scroll.css" rel="stylesheet">
+	<link href="css/dtx-summary-table.css" rel="stylesheet">
+	<link href="css/prettify.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/animations.css">
+	
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
   <script src="bower_components/jquery/jquery.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-animate/angular-animate.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/angular-resource/angular-resource.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/controllers.js"></script>
-  <script src="js/services.js"></script>
+  
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/prettify.js"></script>
+  <script>
+	$(function(){
+		prettyPrint();
+	});
+  </script>
+
 </head>
 <body>
 
   <div class="view-container">
     <div ng-view class="view-frame"></div>
   </div>
+	
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/services.js"></script>
 
 </body>
 </html>
